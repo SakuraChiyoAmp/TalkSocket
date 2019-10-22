@@ -113,14 +113,15 @@ router.get("/get",async(ctx,next)=>{
 
 //数据库
 const mysql=require("mysql")
-var connection = mysql.createConnection({     
-  host     : 'localhost',       
-  user     : 'root',              
-  password : 'password',       
-  port: '3305',                   
-  database: 'vuesocket' 
-});
-connection.connect();
+const connection=require("./dbtool/connection");
+// var connection = mysql.createConnection({     
+//   host     : 'localhost',       
+//   user     : 'root',              
+//   password : 'password',       
+//   port: '3305',                   
+//   database: 'vuesocket' 
+// });
+// connection.connect();
 
 // middlewares
 app.use(bodyparser({

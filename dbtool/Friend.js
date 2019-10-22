@@ -1,12 +1,13 @@
 const mysql=require("mysql")
-var connection = mysql.createConnection({     
-  host     : 'localhost',       
-  user     : 'root',              
-  password : 'password',       
-  port: '3305',                   
-  database: 'vuesocket' 
-});
-connection.connect();
+// var connection = mysql.createConnection({     
+//   host     : 'localhost',       
+//   user     : 'root',              
+//   password : 'password',       
+//   port: '3305',                   
+//   database: 'vuesocket' 
+// });
+// connection.connect();
+const connection=require("./connection");
 module.exports ={
  AddFriend:async function  (UserName,OtherUserName){
         let FinalResult={}

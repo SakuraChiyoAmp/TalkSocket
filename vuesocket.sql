@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : 65001
 
- Date: 19/10/2019 22:05:23
+ Date: 22/10/2019 18:23:08
 */
 
 SET NAMES utf8mb4;
@@ -39,6 +39,7 @@ INSERT INTO `friend` VALUES ('a', '1xx', 1);
 INSERT INTO `friend` VALUES ('a', 'xx1', 1);
 INSERT INTO `friend` VALUES ('a', 'x1x', 1);
 INSERT INTO `friend` VALUES ('a', 'e', 1);
+INSERT INTO `friend` VALUES ('www', 'a', 1);
 
 -- ----------------------------
 -- Table structure for group
@@ -62,7 +63,7 @@ CREATE TABLE `message`  (
   `Flag` int(255) DEFAULT NULL,
   `Message` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 69 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 72 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of message
@@ -109,6 +110,14 @@ INSERT INTO `message` VALUES ('a', 'e', NULL, 68, 1571464547133, 1, 'w');
 INSERT INTO `message` VALUES ('a', 'e', NULL, 69, 1571465572109, 1, 'fadsfsa');
 INSERT INTO `message` VALUES ('e', 'a', NULL, 70, 1571465581181, 1, 'fff');
 INSERT INTO `message` VALUES ('a', 'e', NULL, 71, 1571465598036, 1, '离线测试');
+INSERT INTO `message` VALUES ('www', 'a', NULL, 72, 1571666550796, 1, '你好');
+INSERT INTO `message` VALUES ('www', 'a', NULL, 73, 1571666576565, 1, '测试离线的接受情况');
+INSERT INTO `message` VALUES ('a', 'www', NULL, 74, 1571666597494, 1, '好了');
+INSERT INTO `message` VALUES ('a', 'www', NULL, 75, 1571671210675, 1, '呜呜呜');
+INSERT INTO `message` VALUES ('a', 'www', NULL, 76, 1571673064099, 1, '离线接收成功');
+INSERT INTO `message` VALUES ('www', 'a', NULL, 77, 1571673447515, 1, '???');
+INSERT INTO `message` VALUES ('a', 'www', NULL, 78, 1571739560175, 1, 'hi');
+INSERT INTO `message` VALUES ('www', 'a', NULL, 79, 1571739613463, 1, '？？');
 
 -- ----------------------------
 -- Table structure for token
@@ -122,8 +131,7 @@ CREATE TABLE `token`  (
 -- ----------------------------
 -- Records of token
 -- ----------------------------
-INSERT INTO `token` VALUES ('a', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzE0OTI0NzgsImV4cCI6MTU3MTQ5MzY3OH0.bQFK3Kn1tdGbYRcEeEm_I7KH8Kj-NJQHJvzQ79geGGc');
-INSERT INTO `token` VALUES ('a', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzE0OTI0ODEsImV4cCI6MTU3MTQ5MzY4MX0.bF1vQIuCTfZXh5gQT8m00_r84Uxvl7-v4l4zhJL_Kus');
+INSERT INTO `token` VALUES ('www', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NzE3Mzk1MjgsImV4cCI6MTU3MTc0MDcyOH0.GGwwiyRAlf54KIxdNcrnJ4g1P5BLp_VuZl6trmK2PPM');
 
 -- ----------------------------
 -- Table structure for userinfo
@@ -148,5 +156,6 @@ INSERT INTO `userinfo` VALUES ('f', 'f', 'f', 'http://localhost:3000/images/2.jp
 INSERT INTO `userinfo` VALUES ('1xx', '1xx', '1xx', 'http://localhost:3000/images/2.jpg');
 INSERT INTO `userinfo` VALUES ('xx1', 'xx1', 'xx1', 'http://localhost:3000/images/2.jpg');
 INSERT INTO `userinfo` VALUES ('x1x', 'x1x', 'x1x', 'http://localhost:3000/images/2.jpg');
+INSERT INTO `userinfo` VALUES ('www', 'www', 'www', 'http://localhost:3000/images/1571666165988.jpg');
 
 SET FOREIGN_KEY_CHECKS = 1;
